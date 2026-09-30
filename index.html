@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>1ST YEAR OF US ♡</title>
+
+    <!-- Title font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rye&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================================
+           COLORS & FONTS
+        ========================================================= */
+
+        :root {
+            --yellow: #ffe000;
+            --title-font: "Rye", serif;
+            --body-font: "Montserrat", Arial, sans-serif;
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+
+        body {
+            background: #111;
+            color: var(--yellow);
+            font-family: var(--body-font);
+            overflow-x: hidden;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================================================
+           MAIN BACKGROUND
+        ========================================================= */
+
+        .website {
+            position: relative;
+
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100svh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            /* DESKTOP BACKGROUND */
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.08),
+                    rgba(0, 0, 0, 0.08)
+                ),
+                url("IMG_2768.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        /* Dark vignette */
+
+        .website::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    transparent 30%,
+                    rgba(0, 0, 0, 0.35) 100%
+                );
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+
+        /* Subtle vintage grain */
+
+        .website::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            opacity: 0.06;
+
+            background-image:
+                repeating-radial-gradient(
+                    circle at 0 0,
+                    rgba(255,255,255,0.5) 0,
+                    rgba(255,255,255,0.5) 1px,
+                    transparent 1px,
+                    transparent 3px
+                );
+
+            background-size: 5px 5px;
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           CONTENT
+        ========================================================= */
+
+        .screen {
+            position: relative;
+
+            z-index: 5;
+
+            width: min(1100px, 94vw);
+
+            min-height: 90vh;
+            min-height: 90svh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 45px 30px;
+        }
+
+
+        .content {
+            width: 100%;
+            max-width: 900px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           FIRST PAGE
+        ========================================================= */
+
+        #initialPage {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            animation: fadeIn 1s ease both;
+        }
+
+
+        .small-heading {
+            font-family: var(--body-font);
+
+            font-size: clamp(13px, 1.5vw, 20px);
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.02em;
+
+            margin-bottom: 14px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.8);
+        }
+
+
+        .main-title {
+            font-family: var(--title-font);
+
+            color: var(--yellow);
+
+            font-size: clamp(45px, 7vw, 90px);
+
+            line-height: 0.9;
+
+            text-transform: uppercase;
+
+            max-width: 950px;
+
+            margin-bottom: 32px;
+
+            text-shadow:
+                2px 3px 0 rgba(0,0,0,0.55),
+                0 0 8px rgba(255,224,0,0.15);
+        }
+
+
+        .intro {
+            font-family: var(--body-font);
+
+            font-size: clamp(17px, 2vw, 25px);
+
+            line-height: 1.45;
+
+            font-weight: 600;
+
+            max-width: 650px;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        .description {
+            font-family: var(--body-font);
+
+            font-size: clamp(13px, 1.35vw, 17px);
+
+            line-height: 1.65;
+
+            font-weight: 500;
+
+            max-width: 760px;
+
+            margin-bottom: 28px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        .question {
+            font-family: var(--body-font);
+
+            font-size: clamp(16px, 1.7vw, 22px);
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        /* =========================================================
+           BUTTON AREA
+        ========================================================= */
+
+        .button-area {
+            position: relative;
+
+            width: min(620px, 90vw);
+
+            height: 180px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 80px;
+        }
+
+
+        .yes-button,
+        .no-button {
+            border: none;
+
+            background: transparent;
+
+            color: var(--yellow);
+
+            outline: none;
+
+            user-select: none;
+            -webkit-user-select: none;
+
+            touch-action: manipulation;
+        }
+
+
+        /* =========================================================
+           YES BUTTON
+        ========================================================= */
+
+        .yes-button {
+            position: relative;
+
+            z-index: 20;
+
+            font-family: var(--title-font);
+
+            font-size: clamp(58px, 7vw, 100px);
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            transform: scale(1);
+
+            transition:
+                transform 0.35s cubic-bezier(.2,.8,.2,1),
+                text-shadow 0.3s ease;
+
+            text-shadow:
+                0 0 4px rgba(255,224,0,0.45),
+                0 0 10px rgba(255,224,0,0.25);
+
+            animation: yesGlow 2.2s ease-in-out infinite;
+        }
+
+
+        @media (hover: hover) and (pointer: fine) {
+
+            .yes-button:hover {
+                text-shadow:
+                    0 0 5px rgba(255,224,0,0.75),
+                    0 0 14px rgba(255,224,0,0.5),
+                    0 0 26px rgba(255,224,0,0.25);
+            }
+
+        }
+
+
+        /* =========================================================
+           NO BUTTON
+        ========================================================= */
+
+        .no-button {
+            position: relative;
+
+            z-index: 10;
+
+            font-family: var(--title-font);
+
+            font-size: clamp(28px, 3vw, 45px);
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.8);
+
+            transition:
+                left 0.22s ease,
+                top 0.22s ease;
+        }
+
+
+        /* =========================================================
+           SUCCESS PAGE
+        ========================================================= */
+
+        #successPage {
+            display: none;
+
+            width: 100%;
+
+            animation: successAppear 1.1s ease both;
+        }
+
+
+        .success-title {
+            font-family: var(--title-font);
+
+            color: var(--yellow);
+
+            font-size: clamp(40px, 6vw, 75px);
+
+            line-height: 0.95;
+
+            text-transform: uppercase;
+
+            max-width: 900px;
+
+            margin-bottom: 24px;
+
+            text-shadow:
+                2px 3px 0 rgba(0,0,0,0.55),
+                0 0 10px rgba(255,224,0,0.15);
+        }
+
+
+        .success-text {
+            font-family: var(--body-font);
+
+            font-size: clamp(14px, 1.5vw, 19px);
+
+            line-height: 1.6;
+
+            max-width: 650px;
+
+            font-weight: 500;
+
+            margin-bottom: 17px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        .plan-intro {
+            font-family: var(--body-font);
+
+            font-size: clamp(15px, 1.6vw, 20px);
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        /* =========================================================
+           BULLET LIST
+        ========================================================= */
+
+        .plan-list {
+            list-style: none;
+
+            width: min(650px, 90vw);
+
+            text-align: left;
+
+            margin: 0 auto 20px;
+
+            padding: 0 15px;
+        }
+
+
+        .plan-list li {
+            position: relative;
+
+            font-family: var(--body-font);
+
+            font-size: clamp(13px, 1.35vw, 18px);
+
+            line-height: 1.55;
+
+            font-weight: 500;
+
+            padding-left: 18px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        .plan-list li::before {
+            content: "•";
+
+            position: absolute;
+
+            left: 0;
+
+            color: var(--yellow);
+
+            font-weight: 900;
+        }
+
+
+        .love-number {
+            font-family: var(--title-font);
+
+            font-size: clamp(38px, 5vw, 65px);
+
+            line-height: 1;
+
+            margin: 10px 0 18px;
+
+            text-shadow:
+                2px 3px 0 rgba(0,0,0,0.55),
+                0 0 10px rgba(255,224,0,0.3);
+        }
+
+
+        .final-message {
+            font-family: var(--body-font);
+
+            font-size: clamp(14px, 1.5vw, 19px);
+
+            font-weight: 600;
+
+            line-height: 1.5;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        /* =========================================================
+           KISSES
+        ========================================================= */
+
+        .kiss-container {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 4;
+
+            overflow: hidden;
+
+            pointer-events: none;
+        }
+
+
+        .kiss {
+            position: absolute;
+
+            width: clamp(60px, 9vw, 140px);
+
+            height: auto;
+
+            opacity: 0;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(
+                    0 4px 5px rgba(0,0,0,0.45)
+                );
+
+            animation:
+                kissAppear 0.8s ease forwards,
+                kissFloat 5s ease-in-out infinite;
+        }
+
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes successAppear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.94);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        @keyframes yesGlow {
+
+            0%,
+            100% {
+
+                text-shadow:
+                    0 0 4px rgba(255,224,0,0.45),
+                    0 0 10px rgba(255,224,0,0.25);
+
+            }
+
+            50% {
+
+                text-shadow:
+                    0 0 6px rgba(255,224,0,0.7),
+                    0 0 16px rgba(255,224,0,0.4);
+
+            }
+
+        }
+
+
+        @keyframes kissAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    scale(0.2)
+                    rotate(-20deg);
+            }
+
+            to {
+                opacity: 0.95;
+
+                transform:
+                    scale(1)
+                    rotate(0deg);
+            }
+
+        }
+
+
+        @keyframes kissFloat {
+
+            0%,
+            100% {
+                margin-top: 0;
+            }
+
+            50% {
+                margin-top: -15px;
+            }
+
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .website {
+
+                /*
+                    PHONE BACKGROUND
+                */
+
+                background-image:
+                    linear-gradient(
+                        rgba(0,0,0,0.08),
+                        rgba(0,0,0,0.08)
+                    ),
+                    url("IMG_2773.jpeg");
+
+                background-size: cover;
+
+                background-position: center;
+
+                background-repeat: no-repeat;
+            }
+
+
+            .screen {
+                width: 100%;
+
+                min-height: 100svh;
+
+                padding:
+                    35px
+                    20px
+                    45px;
+            }
+
+
+            .main-title {
+
+                font-size:
+                    clamp(38px, 11vw, 62px);
+
+                line-height: 0.92;
+
+                margin-bottom: 27px;
+            }
+
+
+            .small-heading {
+                font-size: 13px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .intro {
+
+                font-size: 16px;
+
+                max-width: 320px;
+
+                line-height: 1.45;
+
+                margin-bottom: 17px;
+            }
+
+
+            .description {
+
+                font-size: 12px;
+
+                line-height: 1.55;
+
+                max-width: 330px;
+
+                margin-bottom: 24px;
+            }
+
+
+            .question {
+
+                font-size: 15px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .button-area {
+
+                width: 100%;
+
+                height: 200px;
+
+                gap: 45px;
+            }
+
+
+            .yes-button {
+
+                font-size:
+                    clamp(58px, 18vw, 90px);
+            }
+
+
+            .no-button {
+
+                font-size: 30px;
+
+                cursor: default;
+            }
+
+
+            .success-title {
+
+                font-size:
+                    clamp(34px, 10.5vw, 55px);
+
+                margin-bottom: 19px;
+            }
+
+
+            .success-text {
+
+                font-size: 13px;
+
+                max-width: 310px;
+
+                line-height: 1.55;
+            }
+
+
+            .plan-intro {
+
+                font-size: 14px;
+
+                margin-bottom: 7px;
+            }
+
+
+            .plan-list {
+
+                width: 100%;
+
+                max-width: 320px;
+
+                padding: 0 3px;
+
+                margin-bottom: 17px;
+            }
+
+
+            .plan-list li {
+
+                font-size: 12px;
+
+                line-height: 1.55;
+
+                padding-left: 16px;
+            }
+
+
+            .love-number {
+
+                font-size: 42px;
+
+                margin: 9px 0 14px;
+            }
+
+
+            .final-message {
+
+                font-size: 13px;
+
+                max-width: 280px;
+            }
+
+
+            .kiss {
+
+                width:
+                    clamp(45px, 17vw, 85px);
+            }
+
+        }
+
+
+        /* =========================================================
+           VERY SMALL PHONES
+        ========================================================= */
+
+        @media (max-width: 370px) {
+
+            .screen {
+
+                padding-left: 15px;
+
+                padding-right: 15px;
+            }
+
+
+            .main-title {
+
+                font-size: 36px;
+            }
+
+
+            .description {
+
+                font-size: 11px;
+            }
+
+
+            .button-area {
+
+                height: 175px;
+            }
+
+
+            .yes-button {
+
+                font-size: 54px;
+            }
+
+
+            .no-button {
+
+                font-size: 25px;
+            }
+
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="website" id="website">
+
+
+        <!-- =====================================================
+             KISS LAYER
+        ====================================================== -->
+
+        <div
+            class="kiss-container"
+            id="kissContainer"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             CONTENT
+        ====================================================== -->
+
+        <section class="screen">
+
+            <div class="content">
+
+
+                <!-- =================================================
+                     FIRST SCREEN
+                ================================================== -->
+
+                <div id="initialPage">
+
+                    <div class="small-heading">
+                        1ST YEAR OF US
+                    </div>
+
+
+                    <h1 class="main-title">
+                        SUBSCRIPTION<br>
+                        RENEWAL
+                    </h1>
+
+
+                    <p class="intro">
+                        Yayyy, we made it through<br>
+                        our first year together!!
+                    </p>
+
+
+                    <p class="description">
+                        365 days of hugs, kisses, “watching movies”,
+                        silly jokes, deep talks, little moments,
+                        big adventures and a whole lot of love.
+                    </p>
+
+
+                    <p class="question">
+                        Would you like to continue?
+                    </p>
+
+
+                    <div
+                        class="button-area"
+                        id="buttonArea"
+                    >
+
+                        <button
+                            type="button"
+                            class="yes-button"
+                            id="yesButton"
+                        >
+                            YES
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="no-button"
+                            id="noButton"
+                        >
+                            NO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SUCCESS SCREEN
+                ================================================== -->
+
+                <div id="successPage">
+
+                    <h2 class="success-title">
+                        SUBSCRIPTION<br>
+                        RENEWED<br>
+                        SUCCESSFULLY ♡
+                    </h2>
+
+
+                    <p class="success-text">
+                        Your subscription to this relationship
+                        has been successfully renewed.
+                    </p>
+
+
+                    <p class="plan-intro">
+                        Your new plan includes:
+                    </p>
+
+
+                    <ul class="plan-list">
+
+                        <li>
+                            unlimited hugs
+                        </li>
+
+                        <li>
+                            unlimited kisses
+                        </li>
+
+                        <li>
+                            endless talks
+                        </li>
+
+                        <li>
+                            new adventures
+                        </li>
+
+                        <li>
+                            an unreasonable amount of GIFs
+                        </li>
+
+                        <li>
+                            making even more memories together
+                        </li>
+
+                        <li>
+                            and, of course...
+                        </li>
+
+                    </ul>
+
+
+                    <div class="love-number">
+                        ∞ + 2 LOVE
+                    </div>
+
+
+                    <p class="final-message">
+                        Thank you for choosing me<br>
+                        for another year💕
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script>
+
+        /* =========================================================
+           ELEMENTS
+        ========================================================= */
+
+        const initialPage =
+            document.getElementById("initialPage");
+
+        const successPage =
+            document.getElementById("successPage");
+
+        const yesButton =
+            document.getElementById("yesButton");
+
+        const noButton =
+            document.getElementById("noButton");
+
+        const buttonArea =
+            document.getElementById("buttonArea");
+
+        const kissContainer =
+            document.getElementById("kissContainer");
+
+
+        /* =========================================================
+           STATE
+        ========================================================= */
+
+        let yesScale = 1;
+
+        let hasRenewed = false;
+
+
+        const GROW_AMOUNT = 0.18;
+
+        const MAX_YES_SCALE = 2.8;
+
+
+        /* =========================================================
+           CHECK DEVICE TYPE
+        ========================================================= */
+
+        function isDesktop() {
+
+            return window.matchMedia(
+                "(hover: hover) and (pointer: fine)"
+            ).matches;
+
+        }
+
+
+        /* =========================================================
+           GROW YES
+        ========================================================= */
+
+        function growYes() {
+
+            if (hasRenewed) {
+                return;
+            }
+
+
+            yesScale += GROW_AMOUNT;
+
+
+            yesScale = Math.min(
+                yesScale,
+                MAX_YES_SCALE
+            );
+
+
+            yesButton.style.transform =
+                `scale(${yesScale})`;
+
+        }
+
+
+        /* =========================================================
+           MOVE NO
+        ========================================================= */
+
+        function moveNo() {
+
+            if (hasRenewed) {
+                return;
+            }
+
+
+            growYes();
+
+
+            const areaRect =
+                buttonArea.getBoundingClientRect();
+
+
+            const noRect =
+                noButton.getBoundingClientRect();
+
+
+            noButton.style.position =
+                "absolute";
+
+
+            const padding = 10;
+
+
+            const maxX =
+                Math.max(
+                    padding,
+                    areaRect.width -
+                    noRect.width -
+                    padding
+                );
+
+
+            const maxY =
+                Math.max(
+                    padding,
+                    areaRect.height -
+                    noRect.height -
+                    padding
+                );
+
+
+            let randomX =
+                padding +
+                Math.random() *
+                (maxX - padding);
+
+
+            let randomY =
+                padding +
+                Math.random() *
+                (maxY - padding);
+
+
+            const yesRect =
+                yesButton.getBoundingClientRect();
+
+
+            for (let i = 0; i < 8; i++) {
+
+                const testLeft =
+                    areaRect.left +
+                    randomX;
+
+
+                const testTop =
+                    areaRect.top +
+                    randomY;
+
+
+                const testCenterX =
+                    testLeft +
+                    noRect.width / 2;
+
+
+                const testCenterY =
+                    testTop +
+                    noRect.height / 2;
+
+
+                const yesCenterX =
+                    yesRect.left +
+                    yesRect.width / 2;
+
+
+                const yesCenterY =
+                    yesRect.top +
+                    yesRect.height / 2;
+
+
+                const distance =
+                    Math.hypot(
+                        testCenterX - yesCenterX,
+                        testCenterY - yesCenterY
+                    );
+
+
+                if (distance > 130) {
+                    break;
+                }
+
+
+                randomX =
+                    padding +
+                    Math.random() *
+                    Math.max(
+                        1,
+                        maxX - padding
+                    );
+
+
+                randomY =
+                    padding +
+                    Math.random() *
+                    Math.max(
+                        1,
+                        maxY - padding
+                    );
+
+            }
+
+
+            noButton.style.left =
+                `${randomX}px`;
+
+
+            noButton.style.top =
+                `${randomY}px`;
+
+        }
+
+
+        /* =========================================================
+           DESKTOP:
+           NO ESCAPES WHEN CURSOR GETS CLOSE
+        ========================================================= */
+
+        document.addEventListener(
+            "mousemove",
+            function(event) {
+
+                if (!isDesktop()) {
+                    return;
+                }
+
+
+                if (hasRenewed) {
+                    return;
+                }
+
+
+                const noRect =
+                    noButton.getBoundingClientRect();
+
+
+                const noCenterX =
+                    noRect.left +
+                    noRect.width / 2;
+
+
+                const noCenterY =
+                    noRect.top +
+                    noRect.height / 2;
+
+
+                const distance =
+                    Math.hypot(
+                        event.clientX - noCenterX,
+                        event.clientY - noCenterY
+                    );
+
+
+                if (distance < 100) {
+
+                    moveNo();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           DESKTOP:
+           EXTRA PROTECTION WHEN MOUSE ENTERS NO
+        ========================================================= */
+
+        noButton.addEventListener(
+            "mouseenter",
+            function() {
+
+                if (isDesktop()) {
+
+                    moveNo();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           MOBILE:
+           NO DOES NOT WORK
+
+           Instead, YES gets bigger.
+        ========================================================= */
+
+        noButton.addEventListener(
+            "touchstart",
+            function(event) {
+
+                if (hasRenewed) {
+                    return;
+                }
+
+
+                event.preventDefault();
+
+
+                growYes();
+
+            },
+            {
+                passive: false
+            }
+        );
+
+
+        /*
+            Prevent NO from working through a normal tap/click.
+        */
+
+        noButton.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+
+                if (!isDesktop()) {
+
+                    growYes();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           YES
+        ========================================================= */
+
+        yesButton.addEventListener(
+            "click",
+            function() {
+
+                renewRelationship();
+
+            }
+        );
+
+
+        /* =========================================================
+           RENEWAL
+        ========================================================= */
+
+        function renewRelationship() {
+
+            if (hasRenewed) {
+                return;
+            }
+
+
+            hasRenewed = true;
+
+
+            initialPage.style.display =
+                "none";
+
+
+            successPage.style.display =
+                "block";
+
+
+            yesButton.style.animation =
+                "none";
+
+
+            noButton.style.display =
+                "none";
+
+
+            createKisses();
+
+        }
+
+
+        /* =========================================================
+           CREATE KISSES
+        ========================================================= */
+
+        function createKisses() {
+
+            const isPhone =
+                window.innerWidth <= 700;
+
+
+            const amount =
+                isPhone ? 15 : 25;
+
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                createKiss(i);
+
+            }
+
+        }
+
+
+        /* =========================================================
+           CREATE ONE KISS
+        ========================================================= */
+
+        function createKiss(index) {
+
+            const kiss =
+                document.createElement("img");
+
+
+            kiss.src =
+                "IMG_2770.png";
+
+
+            kiss.className =
+                "kiss";
+
+
+            kiss.alt =
+                "";
+
+
+            kiss.style.left =
+                `${Math.random() * 92}%`;
+
+
+            kiss.style.top =
+                `${Math.random() * 88}%`;
+
+
+            const scale =
+                0.65 +
+                Math.random() * 0.65;
+
+
+            const rotation =
+                -25 +
+                Math.random() * 50;
+
+
+            kiss.style.transform =
+                `scale(${scale}) rotate(${rotation}deg)`;
+
+
+            kiss.style.animationDelay =
+                `${index * 0.07}s`;
+
+
+            kissContainer.appendChild(kiss);
+
+        }
+
+
+        /* =========================================================
+           PREVENT DRAGGING THE KISS IMAGE
+        ========================================================= */
+
+        document.addEventListener(
+            "dragstart",
+            function(event) {
+
+                if (
+                    event.target.tagName === "IMG"
+                ) {
+
+                    event.preventDefault();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
